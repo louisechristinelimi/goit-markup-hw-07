@@ -55,16 +55,16 @@ body {
 }
 
 .container {
-  width: 428px;
+  max-width: 428px;
   margin: 0 auto;
   padding: 0 15px;
 
   @media screen and (min-width: 768px) {
-    width: 768px;
+    max-width: 768px;
   }
 
   @media screen and (min-width: 1158px) {
-    width: 1158px;
+    max-width: 1158px;
   }
 }
 
@@ -85,8 +85,15 @@ body {
 }
 
 .header {
-  padding: 24px 0;
   border-bottom: 1px solid var(--cornflower, #e7e9fc);
+
+  @media screen and (min-width: 768px) {
+    padding: 2px 0;
+  }
+
+  @media screen and (min-width: 1158px) {
+    padding: 19px 0;
+  }
 }
 
 .header-container {
@@ -143,6 +150,7 @@ nav {
   color: var(--navyblue, #2e2f42);
   font-weight: 500;
   position: relative;
+  padding: 24px 0;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -156,7 +164,7 @@ nav {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -29px;
+  bottom: -1px;
   width: 0;
   height: 4px;
   border: 2px solid transparent;
@@ -185,7 +193,7 @@ nav {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -38px;
+  bottom: -1px;
   width: 100%;
   height: 4px;
   background-color: var(--ocean, #404bbf);
@@ -223,7 +231,6 @@ nav {
 }
 
 .burger-button {
-  margin-left: auto;
   padding: 0;
   width: 32px;
   height: 22px;
@@ -266,7 +273,7 @@ nav {
   flex-shrink: 0;
 
   @media screen and (min-width: 1158px) {
-    padding: 188px;
+    padding: 188px 0;
   }
 }
 
@@ -317,20 +324,20 @@ nav {
   background-color: var(--white, #fff);
 }
 
-.about-list {
+.benefits-list {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 72px;
+  row-gap: 72px;
   flex-wrap: wrap;
 
   @media screen and (min-width: 768px) {
-    gap: 24px;
-    flex-wrap: nowrap;
+    display: inline-flex;
+    column-gap: 24px;
   }
 }
 
-.about-svg {
+.benefits-svg {
   display: none;
 
   @media screen and (min-width: 1158px) {
@@ -345,12 +352,12 @@ nav {
   }
 }
 
-.about-svg_box {
+.benefits-svg_box {
   width: 64px;
   height: 64px;
 }
 
-.about-title {
+.benefits-title {
   color: var(--navyblue, #2e2f42);
   text-align: center;
   font-size: 36px;
@@ -358,6 +365,10 @@ nav {
   line-height: 40px;
   letter-spacing: 0.72px;
   text-transform: capitalize;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 
   @media screen and (min-width: 1158px) {
     font-size: 20px;
@@ -367,8 +378,13 @@ nav {
   }
 }
 
-.about-description {
+.benefits-description {
   color: var(--slate, #434455);
+
+  @media screen and (min-width: 768px) {
+    width: 356px;
+  }
+
   @media screen and (min-width: 1158px) {
     display: flex;
     width: 264px;
@@ -378,7 +394,11 @@ nav {
 }
 
 .section-no-top-padding {
-  padding-top: 0;
+  padding: 0;
+
+  @media screen and (min-width: 1158px) {
+    padding-top: 0;
+  }
 }
 
 .service-title {
@@ -386,6 +406,7 @@ nav {
 
   @media screen and (min-width: 1158px) {
     color: var(--navyblue, #2e2f42);
+    display: block;
     text-align: center;
     font-size: 36px;
     font-weight: 700;
@@ -423,8 +444,13 @@ nav {
 .team-list {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  row-gap: 72px;
   flex-wrap: wrap;
+
+  @media screen and (min-width: 768px) {
+    row-gap: 64px;
+    column-gap: 24px;
+  }
 
   @media screen and (min-width: 1158px) {
     flex-wrap: nowrap;
@@ -505,6 +531,11 @@ nav {
   gap: 72px 16px;
   flex-wrap: wrap;
 
+  @media screen and (min-width: 768px) {
+    gap: 72px 24px;
+    padding: 0 30px;
+  }
+
   @media screen and (min-width: 1158px) {
     flex-wrap: nowrap;
   }
@@ -514,13 +545,17 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 168px;
+  width: 190px;
   height: 88px;
   border-radius: 4px;
   border: 1px solid var(--lightslate, #8e8f99);
   color: var(--light-slate, #8e8f99);
 
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) {
+    width: 168px;
+  }
 }
 
 .customer-link:hover,
@@ -579,6 +614,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   gap: 48px 24px;
+  justify-content: center;
 
   @media screen and (min-width: 1158px) {
     flex-wrap: wrap;
@@ -653,16 +689,35 @@ nav {
 
 .row {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 72px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    padding-left: 108px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 24px;
+    align-items: flex-start;
+  }
 
   @media screen and (min-width: 1158px) {
     flex-direction: row;
+    padding-left: 0px;
+    column-gap: 0;
   }
 }
 
 .footer-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    align-items: flex-start;
+  }
 }
 
 .studiologo2 {
@@ -675,7 +730,13 @@ nav {
 }
 
 .social-media-container {
-  margin-left: 120px;
+  @media screen and (min-width: 768px) {
+    padding-top: 0;
+  }
+
+  @media screen and (min-width: 1158px) {
+    margin-left: 120px;
+  }
 }
 
 .social-media {
@@ -718,19 +779,40 @@ nav {
 .subscribe-container {
   display: flex;
   flex-direction: column;
-  margin-left: 80px;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    align-items: flex-start;
+  }
+
+  @media screen and (min-width: 1158px) {
+    display: inline-flex;
+    flex-direction: column;
+    margin-left: 80px;
+  }
 }
 
 .subscribe {
   color: var(--white, #fff);
   font-weight: 500;
+  margin-bottom: 16px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }
 
 .subscribe-form {
-  display: inline-flex;
-  align-items: flex-start;
+  display: block;
+  text-align: center;
   gap: 24px;
-  margin-top: 16px;
+
+  @media screen and (min-width: 768px) {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-top: 16px;
+  }
 }
 
 .subscribe-input {
@@ -738,7 +820,7 @@ nav {
   background: var(--navyblue, #2e2f42);
   font-size: 12px;
   letter-spacing: 0.48px;
-  width: 264px;
+  width: 100%;
   height: 40px;
   padding: 8px 16px;
   border-radius: 4px;
@@ -746,6 +828,10 @@ nav {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) {
+    width: 264px;
+  }
 }
 
 .subscribe-input:hover,
@@ -770,8 +856,13 @@ nav {
   gap: 16px;
   border-radius: 4px;
   border: none;
+  margin-top: 16px;
 
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
 }
 
 .subscribe-button:hover,
@@ -788,7 +879,6 @@ nav {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -806,12 +896,15 @@ nav {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 408px;
+  min-width: 100vw;
   min-height: 584px;
   padding: 72px 24px 24px 24px;
-
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 428px) {
+    min-width: 408px;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -833,7 +926,6 @@ nav {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   cursor: pointer;
-
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -922,7 +1014,6 @@ span.modal-label-text {
   border-radius: 4px;
   border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
   resize: none;
-
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -967,7 +1058,7 @@ span.modal-label-text {
 .modal-checkbox .checkmark:checked + .check-icon {
   background-color: var(--ocean, #404bbf);
   border-color: var(--ocean, #404bbf);
-  fill: var(--white, #fff);
+  fill: #ffffff;
   outline: none;
 }
 
@@ -1009,20 +1100,17 @@ span.modal-label-text {
 
 .mobile-menu-container {
   position: fixed;
-  display: flex;w
+  display: flex;
   flex-direction: column;
-  left: 0px;
-  top: 0px;
   width: 100vw;
   height: 100vh;
   padding: 80px 0 40px 40px;
   background: var(--white, #fff);
+  top: 0;
 
-  transform: translateY(100%);
-
-  @media screen and (max-width: 380px) {
-    visibility: hidden;
-  }
+  transform: translateY(300%);
+  transition: transform 0.25s ease-out;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -1032,8 +1120,6 @@ span.modal-label-text {
 .mobile-menu-container.is-open {
   transform: translateY(0);
   visibility: visible;
-  transition: transform 0.25s ease-out;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu {
