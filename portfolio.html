@@ -18,28 +18,34 @@
     <header class="header">
       <div class="container header-container">
         <nav>
-          <a href="./index.html" class="logo">
+          <a href="./index.html" class="logo link">
             <span class="weblogo">WEB</span
             ><span class="studiologo">STUDIO</span>
           </a>
           <ul class="nav list">
-            <li><a href="./index.html" class="linkpage visited">Studio</a></li>
             <li>
-              <a href="./portfolio.html" class="linkpage link-active current"
+              <a href="./index.html" class="linkpage visited link">Studio</a>
+            </li>
+            <li>
+              <a
+                href="./portfolio.html"
+                class="linkpage link link-active current"
                 >Portfolio</a
               >
             </li>
-            <li><a href="#" class="linkpage visited">Contacts</a></li>
+            <li><a href="#" class="linkpage link visited">Contacts</a></li>
           </ul>
         </nav>
         <ul class="contactinfo list">
           <li>
-            <a href="mailto:info@devstudio.com" class="contacts"
+            <a href="mailto:info@devstudio.com" class="contacts link"
               >info@devstudio.com</a
             >
           </li>
           <li>
-            <a href="tel:+110001111111" class="contacts">+11 (000) 111-11-11</a>
+            <a href="tel:+110001111111" class="contacts link"
+              >+11 (000) 111-11-11</a
+            >
           </li>
         </ul>
 
@@ -75,7 +81,7 @@
           </ul>
           <ul class="portfolio list">
             <li>
-              <a href="#" class="portfolio-link">
+              <a href="#" class="portfolio-link link">
                 <div class="portfolio-cover">
                   <img
                     src="images/project-1.jpg"
@@ -98,7 +104,7 @@
               </a>
             </li>
             <li>
-              <a href="#" class="portfolio-link">
+              <a href="#" class="portfolio-link link">
                 <div class="portfolio-cover">
                   <img
                     src="images/project-2.jpg"
@@ -119,7 +125,7 @@
               </a>
             </li>
             <li>
-              <a href="#" class="portfolio-link">
+              <a href="#" class="portfolio-link link">
                 <div class="portfolio-cover">
                   <img
                     src="images/project-3.jpg"
@@ -140,7 +146,7 @@
               </a>
             </li>
             <li>
-              <a href="#" class="portfolio-link">
+              <a href="#" class="portfolio-link link">
                 <div class="portfolio-cover">
                   <img
                     src="images/project-4.jpg"
@@ -161,7 +167,7 @@
               </a>
             </li>
             <li>
-              <a href="#" class="portfolio-link">
+              <a href="#" class="portfolio-link link">
                 <div class="portfolio-cover">
                   <img
                     src="images/project-5.jpg"
@@ -182,7 +188,7 @@
               </a>
             </li>
             <li>
-              <a href="#" class="portfolio-link">
+              <a href="#" class="portfolio-link link">
                 <div class="portfolio-cover">
                   <img
                     src="images/project-6.jpg"
@@ -203,7 +209,7 @@
               </a>
             </li>
             <li>
-              <a href="#" class="portfolio-link">
+              <a href="#" class="portfolio-link link">
                 <div class="portfolio-cover">
                   <img
                     src="images/project-7.jpg"
@@ -224,7 +230,7 @@
               </a>
             </li>
             <li>
-              <a href="#" class="portfolio-link">
+              <a href="#" class="portfolio-link link">
                 <div class="portfolio-cover">
                   <img
                     src="images/project-8.jpg"
@@ -245,7 +251,7 @@
               </a>
             </li>
             <li>
-              <a href="#" class="portfolio-link">
+              <a href="#" class="portfolio-link link">
                 <div class="portfolio-cover">
                   <img
                     src="images/project-9.jpg"
@@ -336,6 +342,81 @@
         </div>
       </div>
     </footer>
+
+    <div class="mobile-menu-container" data-menu>
+      <div class="mobile-menu">
+        <button type="button" class="modal-close" data-menu-close>
+          <svg class="modal-close-button" width="8" height="8">
+            <use href="./images/icons.svg#close-button"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu-content">
+          <ul class="mobile-menu-list list">
+            <li>
+              <a href="./index.html" class="mobile-menu-list_item link"
+                >Studio</a
+              >
+            </li>
+            <li>
+              <a
+                href="./portfolio.html"
+                class="mobile-menu-list_item mobile-menu-link-active link"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a href="" class="mobile-menu-list_item link">Contacts</a>
+            </li>
+          </ul>
+          <div class="mobile-menu-contact">
+            <ul class="mobile-contact-list list">
+              <li>
+                <a href="tel:+110001111111" class="mobile-contact_tel link"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mobile-contact_email link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-menu-social list">
+              <li>
+                <a href="#" class="footer-social-link">
+                  <svg class="footer-social-link_box">
+                    <use href="./images/icons.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="footer-social-link">
+                  <svg class="footer-social-link_box">
+                    <use href="./images/icons.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="footer-social-link">
+                  <svg class="footer-social-link_box">
+                    <use href="./images/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="footer-social-link">
+                  <svg class="footer-social-link_box">
+                    <use href="./images/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="./js/mobile-menu.js"></script>
   </body>
